@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -13,17 +13,15 @@ const App = () => {
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
   return (
-    <Router>
-      <div className={darkMode ? "dark" : ""}>
-        <Navbar toggleDarkMode={toggleDarkMode} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div className={darkMode ? "dark" : ""}>
+      <Navbar toggleDarkMode={toggleDarkMode} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 };
 
