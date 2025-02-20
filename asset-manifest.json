@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Bennefield_Portfolio/static/css/main.d0e40cb7.css",
+    "main.js": "/Bennefield_Portfolio/static/js/main.a468378c.js",
+    "index.html": "/Bennefield_Portfolio/index.html",
+    "main.d0e40cb7.css.map": "/Bennefield_Portfolio/static/css/main.d0e40cb7.css.map",
+    "main.a468378c.js.map": "/Bennefield_Portfolio/static/js/main.a468378c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0e40cb7.css",
+    "static/js/main.a468378c.js"
+  ]
+}
