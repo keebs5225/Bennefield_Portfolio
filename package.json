@@ -2,7 +2,7 @@
     "name": "bennefield-portfolio",
     "version": "1.0.0",
     "description": "Minimalist and Interactive developer portfolio",
-    "homepage": "https://keebs5225.github.io/Bennefield_Portfolio",
+    "homepage": "https://keebs5225.github.io/Bennefield_Portfolio/",
     "private": true,
     "dependencies": {
         "framer-motion": "^10.16.1",
