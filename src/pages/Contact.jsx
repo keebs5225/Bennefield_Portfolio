@@ -17,7 +17,7 @@ const Contact = () => {
     // TODO| Form validation and submission logic goes here |
     console.log("Form submitted", formData);
   };
-
+/*TODO| add my info*/
   return (
     <section id="contact" className="contact">
       <h2>Contact Me</h2>

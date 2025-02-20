@@ -1,17 +1,17 @@
 import React from "react";
+import DarkModeToggle from './DarkModeToggle';
 
-const Navbar = ({ toggleDarkMode }) => {
+const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">Your Name</div>
+      <div className="navbar-logo">KB</div>
       <div className="navbar-links">
         <a href="#home">Home</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <button className="dark-mode-toggle" onClick={toggleDarkMode}>
-          Toggle Dark Mode
-        </button>
+        {/*TODO| moon pic for dark ;sun for light*/}
       </div>
+      <DarkModeToggle />
     </nav>
   );
 };

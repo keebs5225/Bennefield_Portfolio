@@ -1,29 +1,32 @@
-/* Global Styles for Deep Green Forest Theme */
+/* Global Styles for Light & Dark Mode */
 
-/* Base styling */
+/* Base styling (Light Mode) */
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #0B3D2E;
-    color: #EAEAEA;
+    background-color: #FFFFFF; /* White background for light mode */
+    color: #333333; /* Dark text for light mode */
+    display: flex; /* Makes body a flex container */
+    flex-direction: column; /* Stack children vertically */
+    height: 100vh; /* Full viewport height */
 }
 
 a {
     text-decoration: none;
-    color: #C2A878;
+    color: #4D79A1; /* Steely blue for links */
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #EAEAEA;
+    color: #3C5B74; /* Dark slate blue hover color */
 }
 
 button {
     cursor: pointer;
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    background-color: #1E5631;
+    background-color: #4D79A1; /* Steely blue button background */
     color: white;
     border: none;
     border-radius: 5px;
@@ -31,7 +34,7 @@ button {
 }
 
 button:hover {
-    background-color: #2E856E;
+    background-color: #3C5B74; /* Dark slate blue hover effect */
     transform: scale(1.05);
 }
 
@@ -41,13 +44,29 @@ section {
 
 h1, h2, h3 {
     margin: 0 0 20px;
-    color: #C2A878;
+    color: #3A506B; /* Dark navy blue for headings */
 }
 
 /* Dark Mode */
 body.dark {
-    background-color: #062A21;
-    color: #D3D3D3;
+    background-color: #121212; /* Dark background for dark mode */
+    color: #D1DFE7; /* Very light gray-blue text for dark mode */
+}
+
+a.dark {
+    color: #D1DFE7; /* Very light gray-blue for links in dark mode */
+}
+
+button.dark {
+    background-color: #4D79A1; /* Steely blue button background for dark mode */
+}
+
+button.dark:hover {
+    background-color: #3C5B74; /* Dark slate blue hover effect for dark mode */
+}
+
+section.dark {
+    padding: 50px 20px;
 }
 
 /* Navbar */
@@ -55,28 +74,68 @@ body.dark {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #1E5631;
-    color: white;
+    background-color: #cbe1f5; /* White background for navbar in light mode */
+    color: #333333; /* Dark text for navbar in light mode */
+    font-size: 24px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensure the navbar stays above content */
+    width: 100%;
 }
 
 .navbar-links {
     display: flex;
     gap: 15px;
+    color: #333333;
 }
 
 .dark-mode-toggle {
     background: none;
     border: none;
-    color: white;
+    color: #4D79A1; /* Steely blue for dark mode toggle */
     cursor: pointer;
+}
+
+/* Effects */
+.circle-shadow-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    display: inline-block; 
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1E5631;
-    color: white;
+    background-color: #FFFFFF; /* White background for footer in light mode */
+    color: #333333; /* Dark text for footer in light mode */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition between modes */
+    width: 100%; /* Ensures footer takes full width */
+}
+
+/* Dark Mode Footer */
+body.dark footer {
+    background-color: #333333; /* Dark background for footer in dark mode */
+    color: #D1DFE7; /* Light text for footer in dark mode */
+}
+
+/* Global Container (App) */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Full height of the viewport */
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1; /* This will make the main content area grow to fill the remaining space */
 }
 
 /* Projects Section */
@@ -88,7 +147,7 @@ footer {
 
 .project-item {
     padding: 20px;
-    background: #1E5631;
+    background: #F5F5F5; /* Light gray background for project items in light mode */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -99,21 +158,33 @@ footer {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Dark Mode Adjustments for Projects */
+body.dark .project-item {
+    background: #333333; /* Darker background for project items in dark mode */
+    color: #D1DFE7; /* Light text for project items */
+}
+
 /* Form Styling */
 form input,
 form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #C2A878;
+    border: 1px solid #4D79A1; /* Steely blue border for form fields */
     border-radius: 5px;
-    background: #0B3D2E;
-    color: white;
+    background: #F5F5F5; /* Light gray background for form fields in light mode */
+    color: #333333; /* Dark text for form fields in light mode */
+}
+
+form input.dark,
+form textarea.dark {
+    background: #444444; /* Dark background for form fields in dark mode */
+    color: #D1DFE7; /* Light text for form fields in dark mode */
 }
 
 button[type="submit"] {
-    background-color: #C2A878;
-    color: #0B3D2E;
+    background-color: #4D79A1; /* Steely blue for submit button */
+    color: white;
     font-weight: bold;
 }
 
