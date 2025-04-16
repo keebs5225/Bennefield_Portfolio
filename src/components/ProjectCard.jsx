@@ -1,13 +1,27 @@
 // ProjectCard.jsx
 
-import React from "react";
+import React, { useState } from "react";
 
-const ProjectCard = ({ title, description, onClick }) => {
+const ProjectCard = ({ project }) => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <div className="project-card" onClick={onClick}>
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
+    <>
+      <div className="project-item" onClick={() => setShowModal(true)}>
+        <h3>{project.title}</h3>
+        <p>{project.description}</p>
+      </div>
+
+      {showModal && (
+        <div className="modal-overlay" onClick={() => setShowModal(false)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <h3>{project.title}</h3>
+            <p>{project.details}</p>
+            <button onClick={() => setShowModal(false)}>Close</button>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
