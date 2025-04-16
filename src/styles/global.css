@@ -78,7 +78,7 @@ section.dark {
     color: #333333; /* Dark text for navbar in light mode */
     font-size: 24px;
     font-weight: bold;
-    position: sticky;
+    position: top;
     top: 0;
     z-index: 100; /* Ensure the navbar stays above content */
     width: 100%;
@@ -197,3 +197,31 @@ button[type="submit"] {
 .home button {
     animation: fadeIn 0.5s ease-in-out;
 }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal {
+    background: #fff;
+    color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  body.dark .modal {
+    background: #222;
+    color: #D1DFE7;
+  }
+  

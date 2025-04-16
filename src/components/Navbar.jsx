@@ -1,17 +1,20 @@
-import React from "react";
-import DarkModeToggle from './DarkModeToggle';
+// Navbar.jsx
 
-const Navbar = () => {
+import React from "react";
+import { Link } from "react-router-dom";
+import DarkModeToggle from "./DarkModeToggle";
+
+const Navbar = ({ toggleDarkMode }) => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">KB</div>
       <div className="navbar-links">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        {/*TODO| moon pic for dark ;sun for light*/}
+        <Link to="/">Home</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
       </div>
-      <DarkModeToggle />
+      <DarkModeToggle toggleDarkMode={toggleDarkMode} />
     </nav>
   );
 };
