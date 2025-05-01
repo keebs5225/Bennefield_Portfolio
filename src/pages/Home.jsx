@@ -6,7 +6,6 @@ const Home = () => {
         {/* TODO */}
       <h1>Hi, I'm Kason Bennefield.</h1>
       <p>Welcome to my developer portfolio</p>
-      <button>Learn More</button>
     </section>
   );
 };
