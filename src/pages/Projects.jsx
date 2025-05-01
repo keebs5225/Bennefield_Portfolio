@@ -3,21 +3,33 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 
-const dummyProjects = [
+const projects = [
   {
-    title: "Project 1",
-    description: "A brief description of Project 1.",
-    details: "More detailed info about Project 1.",
+    title: "Show Watcher",
+    description: "A Python web app to track and manage TV shows.",
+    details: "Built with Flask and HTML/CSS, Show Watcher lets users track their favorite shows.",
+    repo: {
+      user: "keebs5225",
+      name: "Show_Watcher",
+    },
   },
   {
-    title: "Project 2",
-    description: "A brief description of Project 2.",
-    details: "More detailed info about Project 2.",
+    title: "Admin Dashboard",
+    description: "A responsive admin dashboard built with HTML and CSS.",
+    details: "Created as part of The Odin Project, featuring a clean UI and responsive design.",
+    repo: {
+      user: "keebs5225",
+      name: "Admin_Dashboard",
+    },
   },
   {
-    title: "Project 3",
-    description: "A brief description of Project 3.",
-    details: "More detailed info about Project 3.",
+    title: "FileUploader",
+    description: "A stripped-down version of Google Drive with authentication and cloud storage.",
+    details: "Users can upload files, organize them into folders, and store them on cloud platforms.",
+    repo: {
+      user: "keebs5225",
+      name: "FileUploader",
+    },
   },
 ];
 
@@ -26,7 +38,7 @@ const Projects = () => {
     <section id="projects" className="projects">
       <h2>My Projects</h2>
       <div className="projects-grid">
-        {dummyProjects.map((proj, i) => (
+        {projects.map((proj, i) => (
           <ProjectCard key={i} project={proj} />
         ))}
       </div>
