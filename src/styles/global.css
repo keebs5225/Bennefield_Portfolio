@@ -1,4 +1,4 @@
-/* Global Styles for Light & Dark Mode */
+/* Global.css */
 
 /* Base styling (Light Mode) */
 body, html {
@@ -69,33 +69,66 @@ section.dark {
     padding: 50px 20px;
 }
 
-/* Navbar */
+/* Navbar (Light Mode) */
 .navbar {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #cbe1f5; /* White background for navbar in light mode */
-    color: #333333; /* Dark text for navbar in light mode */
+    background-color: #cbe1f5;  /* Soft blue background */
+    color: #333333;
     font-size: 24px;
     font-weight: bold;
-    position: top;
     top: 0;
-    z-index: 100; /* Ensure the navbar stays above content */
+    z-index: 100;
     width: 100%;
 }
 
+/* Navbar (Dark Mode) */
+body.dark .navbar {
+    background-color: #1f2a3a;  /* Deep slate/navy */
+    color: #D1DFE7;             /* Light gray-blue text */
+}
+
+/* Container for the links */
 .navbar-links {
     display: flex;
-    gap: 15px;
-    color: #333333;
+    gap: 20px; /* 👈 Controls spacing between each link */
+    align-items: center;
 }
+
+/* Individual links */
+.navbar-links a {
+    color: #4D79A1;
+    font-weight: 500;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.navbar-links a:hover {
+    color: #3C5B74;
+}
+
+/* Dark mode overrides */
+body.dark .navbar-links a {
+    color: #D1DFE7;
+}
+
+body.dark .navbar-links a:hover {
+    color: #aac9e7;
+}
+
 
 .dark-mode-toggle {
     background: none;
-    border: none;
-    color: #4D79A1; /* Steely blue for dark mode toggle */
+    border: 1px solid #4D79A1;
+    color: #4D79A1;
     cursor: pointer;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-right: 30px;
+    transition: all 0.3s ease;
 }
+
 
 /* Effects */
 .circle-shadow-text {
@@ -114,7 +147,7 @@ section.dark {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #FFFFFF; /* White background for footer in light mode */
+    background-color: #e8e6e6; /* White background for footer in light mode */
     color: #333333; /* Dark text for footer in light mode */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition between modes */
     width: 100%; /* Ensures footer takes full width */
@@ -130,7 +163,7 @@ body.dark footer {
 .app-container {
     display: flex;
     flex-direction: column;
-    min-height: 100%; /* Full height of the viewport */
+    min-height: 100vh; /* Full height of the viewport */
 }
 
 /* Main Content Area */
@@ -176,10 +209,16 @@ form textarea {
     color: #333333; /* Dark text for form fields in light mode */
 }
 
-form input.dark,
-form textarea.dark {
-    background: #444444; /* Dark background for form fields in dark mode */
-    color: #D1DFE7; /* Light text for form fields in dark mode */
+body.dark input,
+body.dark textarea {
+    background-color: #2b2b2b;
+    color: #D1DFE7;
+    border: 1px solid #4D79A1;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+    color: #aaa; /* Softer placeholder for dark mode */
 }
 
 button[type="submit"] {
@@ -209,7 +248,7 @@ button[type="submit"] {
     justify-content: center;
     align-items: center;
     z-index: 999;
-  }
+}
   
   .modal {
     background: #fff;
@@ -218,10 +257,46 @@ button[type="submit"] {
     border-radius: 10px;
     max-width: 500px;
     width: 90%;
-  }
+}
   
   body.dark .modal {
     background: #222;
     color: #D1DFE7;
-  }
-  
+}
+
+  /* GitHub Action Buttons */
+  .github-action-bar {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    padding-bottom:20px;
+}
+
+.github-action-bar iframe {
+    transform: scale(1.4); /* 👈 Make iframe buttons bigger */
+    transform-origin: left center; /* Keeps them aligned */
+    border: none;
+}
+
+.github-view-button {
+    padding: 0.5rem 1.2rem;
+    background-color: #4D79A1;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem; /* Increased from 14px */
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.github-view-button:hover {
+    background-color: #3C5B74;
+    transform: scale(1.05);
+}
+
+body.dark .github-view-button {
+    background-color: #3C5B74;
+    color: #D1DFE7;
+}
