@@ -1,6 +1,7 @@
 // Contact.jsx
 
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,10 +17,29 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO| Form validation and submission logic goes here |
-    console.log("Form submitted", formData);
+
+    const submission = {
+      ...formData,
+      time: new Date().toLocaleString(), // Add timestamp
+    };
+
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        submission,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        alert("✅ Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("❌ Something went wrong. Please try again.");
+      });
   };
-/*TODO| add my info*/
+
   return (
     <section id="contact" className="contact">
       <h2>Contact Me</h2>

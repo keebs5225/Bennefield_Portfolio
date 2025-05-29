@@ -12,6 +12,7 @@ const projects = [
       user: "keebs5225",
       name: "Show_Watcher",
     },
+    // website: "https://show-watcher-demo.vercel.app/", // Add project website URL here
   },
   {
     title: "Admin Dashboard",
@@ -21,6 +22,7 @@ const projects = [
       user: "keebs5225",
       name: "Admin_Dashboard",
     },
+    website: "https://keebs5225.github.io/Admin_Dashboard/", // project website URL 
   },
   {
     title: "FileUploader",
@@ -30,6 +32,7 @@ const projects = [
       user: "keebs5225",
       name: "FileUploader",
     },
+    // website: "https://fileuploader-demo.vercel.app/", // Add project website URL here
   },
 ];
 
