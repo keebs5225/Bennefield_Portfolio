@@ -27,6 +27,18 @@ const ProjectCard = ({ project }) => {
               />
             )}
 
+            {/* ✅ Website Button */}
+            {project.website && (
+              <a
+                href={project.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="visit-site-button"
+              >
+                Visit Site
+              </a>
+            )}
+
             <button onClick={() => setShowModal(false)}>Close</button>
           </div>
         </div>

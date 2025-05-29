@@ -1,14 +1,14 @@
 // Footer.jsx
-
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="footer">
-        <a href="/path-to-resume.pdf" download>
-            <button>Download Resume</button>
-        </a>
-        <p>&copy; Kason Bennefield. All rights reserved.</p>
+      <Link to="/404">
+        <button>Download Resume</button>
+      </Link>
+      <p>&copy; Kason Bennefield. All rights reserved.</p>
     </footer>
   );
 };
