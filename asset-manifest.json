@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/Bennefield_Portfolio/static/css/main.a8a0b950.css",
-    "main.js": "/Bennefield_Portfolio/static/js/main.eda4ef01.js",
+    "main.css": "/Bennefield_Portfolio/static/css/main.f34417e5.css",
+    "main.js": "/Bennefield_Portfolio/static/js/main.ac6f68da.js",
+    "static/media/logo.png": "/Bennefield_Portfolio/static/media/logo.6b1dbabc17f4582382de.png",
     "index.html": "/Bennefield_Portfolio/index.html",
-    "main.a8a0b950.css.map": "/Bennefield_Portfolio/static/css/main.a8a0b950.css.map",
-    "main.eda4ef01.js.map": "/Bennefield_Portfolio/static/js/main.eda4ef01.js.map"
+    "main.f34417e5.css.map": "/Bennefield_Portfolio/static/css/main.f34417e5.css.map",
+    "main.ac6f68da.js.map": "/Bennefield_Portfolio/static/js/main.ac6f68da.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8a0b950.css",
-    "static/js/main.eda4ef01.js"
+    "static/css/main.f34417e5.css",
+    "static/js/main.ac6f68da.js"
   ]
 }
